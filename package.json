@@ -1,0 +1,58 @@
+{
+  "name": "bytefiddler",
+  "version": "0.0.1",
+  "description": "A Quasar Framework app",
+  "productName": "Quasar App",
+  "author": "",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue ./",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@chrisheanan/vue-gauge": "^1.2.2",
+    "@quasar/extras": "^1.0.0",
+    "@syncfusion/ej2-vue-circulargauge": "^19.4.52",
+    "core-js": "^3.6.5",
+    "fusioncharts": "^3.18.0",
+    "jqwidgets-scripts": "^13.2.0",
+    "quasar": "^2.0.0",
+    "smart-webcomponents": "^13.1.1",
+    "vgauge": "^1.2.12-rc3",
+    "vue": "^3.0.0",
+    "vue-echarts-v3": "^2.0.1",
+    "vue-echarts5": "^5.0.7",
+    "vue-fusioncharts": "^3.2.0",
+    "vue-google-charts": "^0.3.3",
+    "vue-router": "^4.0.0",
+    "vue-speed-meter": "^1.1.2",
+    "vuex": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.13.14",
+    "@quasar/app": "^3.0.0",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "eslint-webpack-plugin": "^2.4.0"
+  },
+  "browserslist": [
+    "last 10 Chrome versions",
+    "last 10 Firefox versions",
+    "last 4 Edge versions",
+    "last 7 Safari versions",
+    "last 8 Android versions",
+    "last 8 ChromeAndroid versions",
+    "last 8 FirefoxAndroid versions",
+    "last 10 iOS versions",
+    "last 5 Opera versions"
+  ],
+  "engines": {
+    "node": ">= 12.22.1",
+    "npm": ">= 6.13.4",
+    "yarn": ">= 1.21.1"
+  }
+}
