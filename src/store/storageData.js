@@ -2,6 +2,20 @@ export default {
   namespaced: true,
   state: {
     value: 0,
+    bit: {
+      bit0: 0,
+      bit1: 0,
+      bit2: 0,
+      bit3: 0,
+      bit4: 0,
+      bit5: 0,
+      bit6: 0,
+      bit7: 0
+    },
+    rgb0: 0,
+    rgb1: 0,
+    rgb2: 0,
+    rgb3: 0,
     rows: [
       {
         CHAR: '',
@@ -2062,23 +2076,29 @@ export default {
   mutations: {
     calcValue (state, value) {
       state.value = value.value
-      console.log(state.value)
-      console.log('oben state unten value')
-      console.log(value.value)
-      console.log('success')
     },
     find (state, value) {
-      console.log('Hier the index')
-      console.log(state.rows[value.value].CHAR)
       state.list[0].CHAR = state.rows[value.value].CHAR
       state.list[0].DEC = state.rows[value.value].DEC
       state.list[0].HEX = state.rows[value.value].HEX.replace('h', '')
       state.list[0].NAME = state.rows[value.value].NAME
-      console.log(state.list)
-      /* for (let i = 0; i < state.rows.length; i++) {
-        state.rows[i].HEX = state.rows[i].HEX.replace('h', '')
-      }
-      console.log(state.rows) */
+    },
+    setBit (state, obj) {
+      console.log(obj.value)
+      state.bit[obj.value.name.toString()] = obj.value.value
+      console.log(state.bit)
+    },
+    setRgb0 (state) {
+      state.rgb0 = state.bit.bit7 + state.bit.bit6
+    },
+    setRgb1 (state) {
+      state.rgb1 = state.bit.bit0 + state.bit.bit1
+    },
+    setRgb2 (state) {
+      state.rgb2 = state.bit.bit2 + state.bit.bit3
+    },
+    setRgb3 (state) {
+      state.rgb3 = state.bit.bit4 + state.bit.bit5
     }
   },
   actions: {}

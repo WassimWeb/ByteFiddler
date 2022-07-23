@@ -3,12 +3,12 @@
 
     <q-circular-progress
       reverse
-      style="margin-left: -180px"
+      style="margin-left: -180px;"
       :value="value"
       size="180px"
       :thickness="0.2"
       color="transparent"
-      :center-color="colors"
+      center-color="aler"
       track-color="transparent"
       class="q-ma-md"
     />
@@ -19,11 +19,28 @@
 <script>
 import { useStore } from 'vuex'
 import { computed } from 'vue'
+import { setCssVar } from 'quasar'
 export default {
   setup () {
     const $store = useStore()
     const value = computed({
       get: () => $store.state.storageData.value,
+      set: val => {}
+    })
+    const rgba0 = computed({
+      get: () => $store.state.storageData.rgb0,
+      set: val => {}
+    })
+    const rgba1 = computed({
+      get: () => $store.state.storageData.rgb1,
+      set: val => {}
+    })
+    const rgba2 = computed({
+      get: () => $store.state.storageData.rgb2,
+      set: val => {}
+    })
+    const rgba3 = computed({
+      get: () => $store.state.storageData.rgb3,
       set: val => {}
     })
     function colorschange () {
@@ -48,6 +65,8 @@ export default {
         return 'negative'
       }
     }
+    setCssVar('alert', `rgba(${rgba3.value}, ${rgba2.value} , ${rgba1.value}, ${rgba0.value}`)
+    console.log(alert)
     const colors = computed({ get: () => colorschange().toString() })
     return {
       value,

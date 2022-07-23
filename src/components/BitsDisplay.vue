@@ -86,6 +86,7 @@
 // import { useStore } from 'vuex'
 /*
 */
+/* eslint-disable */
 import sevensegmentdisplay from './seven-segment-display.vue'
 export default {
   name: 'Bitsdisplay',
@@ -131,43 +132,123 @@ export default {
     bitscounter () {
       if (this.value0) {
         this.bit0 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit0',
+        value: 85}
+      })
       } else {
         this.bit0 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit0',
+        value: 0}
+      })
       }
       if (this.value1) {
         this.bit1 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit1',
+        value: 170}
+      })
       } else {
         this.bit1 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit1',
+        value: 0}
+      })
       }
       if (this.value2) {
         this.bit2 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit2',
+        value: 85}
+      })
       } else {
         this.bit2 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit2',
+        value: 0}
+      })
       }
       if (this.value3) {
         this.bit3 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit3',
+        value: 170}
+      })
       } else {
         this.bit3 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit3',
+        value: 0}
+      })
       }
       if (this.value4) {
         this.bit4 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit4',
+        value: 85}
+      })
       } else {
         this.bit4 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit4',
+        value: 0}
+      })
       }
       if (this.value5) {
         this.bit5 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit5',
+        value: 170}
+      })
       } else {
         this.bit5 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit5',
+        value: 0}
+      })
       }
       if (this.value6) {
         this.bit6 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit6',
+        value: 0.333}
+      })
       } else {
         this.bit6 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit6',
+        value: 0}
+      })
       }
       if (this.value7) {
         this.bit7 = 1
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit7',
+        value: 0.667}
+      })
       } else {
         this.bit7 = 0
+        this.$store.commit({
+        type: 'storageData/setBit',
+        value: {name: 'bit7',
+        value: 0}
+      })
       }
       const binary = this.bit7 + '' + this.bit6 + '' + this.bit5 + '' + this.bit4 + '' + this.bit3 + '' + this.bit2 + '' + this.bit1 + '' + this.bit0
       console.log(parseInt(binary, 2))
