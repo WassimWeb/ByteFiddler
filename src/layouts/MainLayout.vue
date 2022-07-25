@@ -2,6 +2,14 @@
   <q-layout view="lHh Lpr lFf" class="body">
     <q-header class="header" style="background: LightSeaGreen">
       <q-toolbar class="row justify-between" >
+        <q-btn
+          flat
+          dense
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
         <q-toolbar-title class="col" >
           <div class=" q-pt-sm q-mb-sm" style="font-weight: bold;
@@ -15,7 +23,14 @@
           </div>
       </q-toolbar>
     </q-header>
+    <q-drawer v-model="leftDrawerOpen">
+      <q-list>
+        <q-item-label header> Essential Links </q-item-label>
 
+        <EssentialLink
+        />
+      </q-list>
+    </q-drawer>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -23,32 +38,56 @@
 </template>
 
 <script>
-import { date } from 'quasar'
+import { date } from 'quasar';
+import { ref } from 'vue';
 
+import EssentialLink from 'components/EssentialLink.vue';
+const linksList = [
+  {
+    title: 'Home'
+  },
+  {
+    title: 'Help'
+  }
+];
 export default {
   name: 'MainLayout',
   data () {
     return {
       time: ''
-    }
+    };
+  },
+  components: {
+    EssentialLink
+  },
+  setup () {
+    const leftDrawerOpen = ref(false);
+
+    return {
+      essentialLinks: linksList,
+      leftDrawerOpen,
+      toggleLeftDrawer () {
+        leftDrawerOpen.value = !leftDrawerOpen.value;
+      }
+    };
   },
   computed: {
     todaysDate () {
-      return date.formatDate(Date.now(), 'DD.MM.YYYY')
+      return date.formatDate(Date.now(), 'DD.MM.YYYY');
     }
   },
   methods: {
     getTime () {
-      this.time = date.formatDate(Date.now(), 'HH:mm')
+      this.time = date.formatDate(Date.now(), 'HH:mm');
     }
   },
   mounted () {
-    this.getTime()
+    this.getTime();
     setInterval(() => {
-      this.getTime()
-    }, 2000)
+      this.getTime();
+    }, 2000);
   }
-}
+};
 </script>
 <style scoped lang="scss">
 .body {

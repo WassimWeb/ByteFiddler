@@ -15,40 +15,41 @@
 </template>
 
 <script>
-import { onMounted, computed } from 'vue'
-import { useStore } from 'vuex'
+import { onMounted, computed } from 'vue';
+import { useStore } from 'vuex';
 
-import 'smart-webcomponents/source/styles/smart.default.css'
-import 'smart-webcomponents/source/modules/smart.gauge.js'
+import 'smart-webcomponents/source/styles/smart.default.css';
+import 'smart-webcomponents/source/modules/smart.gauge.js';
 
 export default {
   name: 'app',
   setup () {
-    const $store = useStore()
+    const $store = useStore();
     const value = computed({
       get: () => $store.state.storageData.value,
       set: val => {}
-    })
-    onMounted(() => {})
+    });
+    onMounted(() => {});
     return {
       value
-    }
+    };
   }
-}
+};
 </script>
 
 <style>
 .gauge {
-  width: 600px;
+  border-radius: 3%;
+  width: 620px;
   height: 700px;
-  margin-top: 100px;
-  margin-left: -120px;
+  margin-top: 60px;
+  margin-left: -140px;
   pointer-events: none;
   font-size: 23px;
   color: rgb(199, 0, 0);
   background: transparent;
-    /* background: radial-gradient(ellipse at center,  #ffffff  0%, #ffffff 70%);
+    background: radial-gradient(ellipse at center,  rgb(183, 255, 251)  0%, #469a64 30%, #78ad79 60%, #afc499 100%);
     background-size: 100%;
-    pointer-events: none; */
+    pointer-events: none;
 }
 </style>

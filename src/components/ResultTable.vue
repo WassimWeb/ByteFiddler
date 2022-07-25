@@ -12,10 +12,10 @@
     /> -->
     <q-card class="my-card text-white" style="background-color: LightSeaGreen">
       <q-card-section>
-        <div class="text-h6">ASCII</div>
+        <div class="text-h6">CHAR</div>
       </q-card-section>
 <q-separator dark />
-      <q-card-section style="font-size: 30px">
+      <q-card-section style="height: 150px; font-size: 30px; text-align: center;">
         {{ row[0].CHAR }}
       </q-card-section>
     </q-card>
@@ -24,25 +24,25 @@
         <div class="text-h6">DEC</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="font-size: 30px">
+      <q-card-section style="height: 150px; font-size: 30px; text-align: center;">
         {{ row[0].DEC }}
       </q-card-section>
     </q-card>
-    <q-card class="my-card text-white" style="background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="margin-top: 50%; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">HEX</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="font-size: 30px">
+      <q-card-section style="height: 150px;font-size: 30px; text-align: center;">
         {{ row[0].HEX }}
       </q-card-section>
     </q-card>
-        <q-card class="my-card text-white" style="background-color: LightSeaGreen">
+        <q-card class="my-card text-white" style="margin-top: 50%; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">DESCRIPTION</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="font-size: 20px">
+      <q-card-section style="height: 150px; font-size: 30px">
         {{ row[0].NAME }}
       </q-card-section>
     </q-card>
@@ -60,24 +60,24 @@ const columns = [
   },
   { name: 'DEC', label: 'DEC', field: 'DEC', align: 'left' },
   { name: 'HEX', label: 'HEX', field: 'HEX', align: 'left' }
-]
-import { useStore } from 'vuex'
-import { computed } from 'vue'
+];
+import { useStore } from 'vuex';
+import { computed } from 'vue';
 const rows = [
   {
     CHAR: '',
     DEC: '',
     HEX: ','
   }
-]
+];
 export default {
 
   setup () {
-    const $store = useStore()
+    const $store = useStore();
     const row = computed({
       get: () => $store.state.storageData.list,
       set: val => {}
-    })
+    });
     return {
       rows,
       row,
@@ -85,9 +85,9 @@ export default {
       pagination: {
         rowsPerPage: 1
       }
-    }
+    };
   }
-}
+};
 </script>
 <style lang="sass">
 .my-sticky-header-resulttable

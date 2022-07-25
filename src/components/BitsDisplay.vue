@@ -137,12 +137,24 @@ export default {
         value: {name: 'bit0',
         value: 85}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit0 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit0',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value1) {
@@ -152,12 +164,25 @@ export default {
         value: {name: 'bit1',
         value: 170}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
+
       } else {
         this.bit1 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit1',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value2) {
@@ -167,12 +192,24 @@ export default {
         value: {name: 'bit2',
         value: 85}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit2 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit2',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value3) {
@@ -182,12 +219,24 @@ export default {
         value: {name: 'bit3',
         value: 170}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit3 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit3',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value4) {
@@ -197,12 +246,24 @@ export default {
         value: {name: 'bit4',
         value: 85}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit4 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit4',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value5) {
@@ -212,12 +273,24 @@ export default {
         value: {name: 'bit5',
         value: 170}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit5 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit5',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value6) {
@@ -227,12 +300,24 @@ export default {
         value: {name: 'bit6',
         value: 0.333}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit6 = 0
         this.$store.commit({
         type: 'storageData/setBit',
         value: {name: 'bit6',
         value: 0}
+      })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
       })
       }
       if (this.value7) {
@@ -242,6 +327,12 @@ export default {
         value: {name: 'bit7',
         value: 0.667}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       } else {
         this.bit7 = 0
         this.$store.commit({
@@ -249,9 +340,14 @@ export default {
         value: {name: 'bit7',
         value: 0}
       })
+      this.$store.commit({
+        type: 'storageData/setRgb'
+      })
+      this.$store.commit({
+        type: 'storageData/setColor'
+      })
       }
       const binary = this.bit7 + '' + this.bit6 + '' + this.bit5 + '' + this.bit4 + '' + this.bit3 + '' + this.bit2 + '' + this.bit1 + '' + this.bit0
-      console.log(parseInt(binary, 2))
       this.value = Number(((parseInt(binary, 2) * 100) / 255).toFixed(2))
       // this.callMutation(this.value)
       this.$store.commit({

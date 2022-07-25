@@ -57,7 +57,7 @@
 </template>
 
 <script>
-import segmentEndpoint from './segment-endpoint.vue'
+import segmentEndpoint from './segment-endpoint.vue';
 
 const SEGMENT_MAP = {
   0: { a: true, b: true, c: true, d: true, e: true, f: true, g: false },
@@ -70,7 +70,7 @@ const SEGMENT_MAP = {
   7: { a: true, b: true, c: true, d: false, e: false, f: false, g: false },
   8: { a: true, b: true, c: true, d: true, e: true, f: true, g: true },
   9: { a: true, b: true, c: true, d: true, e: false, f: true, g: true }
-}
+};
 
 export default {
   components: { 'segment-endpoint': segmentEndpoint },
@@ -103,11 +103,11 @@ export default {
 
   computed: {
     containerWidth () {
-      return this.segmentWidth + this.segmentHeight * 2
+      return this.segmentWidth + this.segmentHeight * 2;
     },
 
     containerHeight () {
-      return this.segmentWidth * 2 + this.segmentHeight * 3
+      return this.segmentWidth * 2 + this.segmentHeight * 3;
     },
 
     containerStyle () {
@@ -116,7 +116,7 @@ export default {
         display: 'inline-block',
         width: `${this.containerWidth}px`,
         height: `${this.containerHeight}px`
-      }
+      };
     },
 
     horizontalSegmentStyle () {
@@ -126,7 +126,7 @@ export default {
         height: `${this.segmentHeight}px`,
         margin: '0 auto',
         borderRadius: `${this.rounded ? this.segmentHeight : 0}px`
-      }
+      };
     },
 
     verticalSegmentContainerStyle () {
@@ -134,7 +134,7 @@ export default {
         position: 'relative',
         width: '100%',
         height: `${this.segmentWidth}px`
-      }
+      };
     },
 
     verticalSegmentStyle () {
@@ -143,23 +143,23 @@ export default {
         width: `${this.segmentHeight}px`,
         height: '100%',
         borderRadius: `${this.rounded ? this.segmentHeight : 0}px`
-      }
+      };
     },
 
     map () {
-      return SEGMENT_MAP[this.value.toString()] || SEGMENT_MAP['0']
+      return SEGMENT_MAP[this.value.toString()] || SEGMENT_MAP['0'];
     }
   },
 
   methods: {
     onoff (segmentName) {
-      const color = this.map[segmentName] ? this.onColor : this.offColor
+      const color = this.map[segmentName] ? this.onColor : this.offColor;
       return {
         backgroundColor: color,
         borderColor: color,
         borderWidth: `${this.segmentHeight}px`
-      }
+      };
     }
   }
-}
+};
 </script>

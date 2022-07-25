@@ -25,9 +25,9 @@ export default {
         top: 'is-on-top',
         bottom: 'is-on-bottom'
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style scoped>

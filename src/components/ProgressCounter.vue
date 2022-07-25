@@ -36,12 +36,12 @@
 
 <script>
 // import VGauge from 'vgauge'
-import { useStore } from 'vuex'
-import { computed } from 'vue'
+import { useStore } from 'vuex';
+import { computed } from 'vue';
 // import Gauge from '@chrisheanan/vue-gauge'
 // import RockiotGauge from './gauge/rockiot.container.vue'
 // import circular from './circular.vue'
-import FusionCharts from './FusionCharts.vue'
+import FusionCharts from './FusionCharts.vue';
 export default {
   /* props: {
     value: {
@@ -50,14 +50,14 @@ export default {
     }
   }, */
   setup (props, context) {
-    const $store = useStore()
+    const $store = useStore();
     const value = computed({
       get: () => $store.state.storageData.value,
       set: val => {}
-    })
+    });
     return {
       value
-    }
+    };
   },
   components: {
     // Gauge
@@ -68,7 +68,7 @@ export default {
   },
   mounted () {
   }
-}
+};
 </script>
 <style scoped>
 

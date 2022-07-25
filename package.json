@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@chrisheanan/vue-gauge": "^1.2.2",
+    "@progress/kendo-vue-gauges": "^3.4.4",
     "@quasar/extras": "^1.0.0",
     "@syncfusion/ej2-vue-circulargauge": "^19.4.52",
     "core-js": "^3.6.5",

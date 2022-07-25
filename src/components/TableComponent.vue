@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md" style="margin-top: -30px; margin-left: -25px">
+  <div class="q-pa-md" style="">
     <q-table
       class="my-sticky-header-table"
       :rows="row"
@@ -39,7 +39,7 @@ const columns = [
   { name: 'OCT', label: 'OCT', field: 'OCT' },
   { name: 'HEX', label: 'HEX', field: 'HEX' },
   { name: 'NAME', label: 'DESCRIPTION', field: 'NAME', required: true, align: 'left' }
-]
+];
 
 const rows = [
   {
@@ -2091,31 +2091,31 @@ const rows = [
     NAME: 'lowercase y with diaeresis'
   }
 
-]
+];
 
 export default {
   setup () {
     function modify () {
       for (let i = 0; i < rows.length; i++) {
-        rows[i].HEX = rows[i].HEX.replace('h', '')
+        rows[i].HEX = rows[i].HEX.replace('h', '');
       }
-      return rows
+      return rows;
     }
-    const row = modify()
+    const row = modify();
     return {
       columns,
       row,
       pagination: {
         rowsPerPage: 255
       }
-    }
+    };
   }
-}
+};
 </script>
 <style lang="sass">
 .my-sticky-header-table
   /* height or max-height is important */
-  height: 900px
+  height: 93vh
   widht: 100%
   .q-table__top,
   .q-table__bottom,
@@ -2135,7 +2135,7 @@ export default {
     top: 0
   /* specifying max-width so the example can
     highlight the sticky column on any browser window */
-  width: 100%
+  width: 98vw
 
   thead tr:first-child th
     /* bg color is important for th; just specify one */

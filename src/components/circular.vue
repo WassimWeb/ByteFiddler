@@ -10,7 +10,7 @@
     </div>
 </template>
 <script>
-import JqxGauge from 'jqwidgets-scripts/jqwidgets-vue/vue_jqxgauge.vue'
+import JqxGauge from 'jqwidgets-scripts/jqwidgets-vue/vue_jqxgauge.vue';
 export default {
   components: {
     JqxGauge
@@ -31,16 +31,16 @@ export default {
         interval: 20,
         formatValue: (value, position) => {
           if (position === 'far') {
-            value = (9 / 5) * value + 32
+            value = (9 / 5) * value + 32;
             if (value === -76) {
-              return '°F'
+              return '°F';
             }
-            return value + '°'
+            return value + '°';
           }
           if (value === -60) {
-            return '°C'
+            return '°C';
           }
-          return value + '°'
+          return value + '°';
         }
       },
       rangesLinear: [
@@ -48,18 +48,18 @@ export default {
         { startValue: 10, endValue: 35, style: { fill: '#FFA200', stroke: '#FFA200' } },
         { startValue: 35, endValue: 60, style: { fill: '#FF4800', stroke: '#FF4800' } }
       ]
-    }
+    };
   },
   mounted: function () {
-    this.$refs.myGauge.value = 140
-    this.$refs.myLinearGauge.value = 40
+    this.$refs.myGauge.value = 140;
+    this.$refs.myLinearGauge.value = 40;
   },
   methods: {
     onValueChanging: function (event) {
-      this.$refs.gaugeValue.innerHTML = Math.round(event.args.value) + ' kph'
+      this.$refs.gaugeValue.innerHTML = Math.round(event.args.value) + ' kph';
     }
   }
-}
+};
 </script>
 <style>
     .gaugeValue {
