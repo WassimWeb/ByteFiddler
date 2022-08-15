@@ -1,28 +1,18 @@
 <template>
-  <div class="vue-root">
-    <smart-gauge
-      class="gauge"
-      analog-display-type="needle"
-      color="black"
-      digital-display
-      start-angle="-30"
-      end-angle="210"
-      min="0"
-      max="100"
-      :value="value"
-    ></smart-gauge>
+  <div>
+    <radial-gauge  class="gauge" :value="value" ></radial-gauge>
   </div>
 </template>
 
 <script>
+import RadialGauge from 'vue-canvas-gauges/src/RadialGauge.vue';
 import { onMounted, computed } from 'vue';
 import { useStore } from 'vuex';
-
-import 'smart-webcomponents/source/styles/smart.default.css';
-import 'smart-webcomponents/source/modules/smart.gauge.js';
-
 export default {
   name: 'app',
+  components: {
+    RadialGauge
+  },
   setup () {
     const $store = useStore();
     const value = computed({
@@ -36,10 +26,15 @@ export default {
   }
 };
 </script>
-
 <style>
 .gauge {
-  border-radius: 3%;
+  width: 30vw;
+  top: -140px;
+  position: relative;
+  right: 110px;
+
+}
+  /* border-radius: 3%;
   width: 620px;
   height: 700px;
   margin-top: 60px;
@@ -50,6 +45,6 @@ export default {
   background: transparent;
     background: radial-gradient(ellipse at center,  rgb(183, 255, 251)  0%, #469a64 30%, #78ad79 60%, #afc499 100%);
     background-size: 100%;
-    pointer-events: none;
-}
+    pointer-events: none; */
+
 </style>
