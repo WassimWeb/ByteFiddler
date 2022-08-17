@@ -2,6 +2,8 @@
 
 A Quasar Framework app
 
+![screenshot](https://github.com/WassimWeb/ByteFiddler/blob/main/screenshot/Screenshot%202022-08-17%20at%2011-32-35%20Quasar%20App.png?raw=true)
+
 ## Install the dependencies
 ```bash
 npm install
