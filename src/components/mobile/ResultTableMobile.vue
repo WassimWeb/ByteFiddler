@@ -10,39 +10,39 @@
       bordered
       v-model:pagination="pagination"
     /> -->
-    <q-card class="my-card text-white" style="width: 12.5vw;background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 45%;background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">CHAR</div>
       </q-card-section>
 <q-separator dark />
-      <q-card-section style="height: 15vh; font-size: 1.5vw; text-align: center;">
+      <q-card-section style="height: 20vh; font-size: 8vw; text-align: center;">
         {{ row[0].CHAR }}
       </q-card-section>
     </q-card>
-    <q-card class="my-card text-white" style="width: 12.5vw;background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 45%;background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">DEC</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="height: 15vh; font-size: 1.5vw; text-align: center;">
+      <q-card-section style="height: 20vh; font-size: 8vw; text-align: center;">
         {{ row[0].DEC }}
       </q-card-section>
     </q-card>
-    <q-card class="my-card text-white" style="width: 12.5vw;top: 43vh; background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 45%;top: 15vh; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">HEX</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="height: 15vh;font-size: 1.5vw; text-align: center;">
+      <q-card-section style="height: 20vh;font-size: 8vw; text-align: center;">
         {{ row[0].HEX }}
       </q-card-section>
     </q-card>
-        <q-card class="my-card text-white" style="width: 12.5vw;top: 43vh; background-color: LightSeaGreen">
+        <q-card class="my-card text-white" style="width: 45%;top: 15vh; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">DESCR</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="height: 15vh; font-size: 1.5vw">
+      <q-card-section style="height: 20vh; font-size: 7vw">
         {{ row[0].NAME }}
       </q-card-section>
     </q-card>
@@ -129,7 +129,7 @@ export default {
 <style scoped>
 .text-h6 {
   display: flex;
-  font-size: 2vw;
+  font-size: 8vw;
   /* margin-top: 2.33em;
   margin-bottom: 2.33em;
   margin-left: 0;

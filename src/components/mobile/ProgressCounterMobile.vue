@@ -41,7 +41,7 @@ import { computed } from 'vue';
 // import Gauge from '@chrisheanan/vue-gauge'
 // import RockiotGauge from './gauge/rockiot.container.vue'
 // import circular from './circular.vue'
-import FusionCharts from './FusionCharts.vue';
+import FusionCharts from './FusionChartsMobile.vue';
 export default {
   /* props: {
     value: {

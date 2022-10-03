@@ -1,5 +1,29 @@
 <template>
-  <div class="q-pa-md" style="">
+  <div class="q-pa-none" v-if="!$q.platform.is.mobile">
+    <q-table
+      class="my-sticky-header-table"
+      :rows="row"
+      :columns="columns"
+      color="white"
+      flat
+      bordered
+      v-model:pagination="pagination"
+    >
+    <template v-slot:header="props">
+        <q-tr :props="props">
+          <q-th
+            v-for="col in props.cols"
+            :key="col.name"
+            :props="props"
+            style="fontSize: 13px; color: white"
+          >
+            {{ col.label }}
+          </q-th>
+        </q-tr>
+      </template>
+    </q-table>
+  </div>
+  <div class="q-pa-none" v-else>
     <q-table
       class="my-sticky-header-table"
       :rows="row"
@@ -2092,9 +2116,10 @@ const rows = [
   }
 
 ];
-
+import { useQuasar } from 'quasar';
 export default {
   setup () {
+    const $q = useQuasar();
     function modify () {
       for (let i = 0; i < rows.length; i++) {
         rows[i].HEX = rows[i].HEX.replace('h', '');
@@ -2107,7 +2132,8 @@ export default {
       row,
       pagination: {
         rowsPerPage: 255
-      }
+      },
+      $q
     };
   }
 };
