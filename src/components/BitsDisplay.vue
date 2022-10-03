@@ -3,27 +3,27 @@
 <div class="container">
   <div class="clock-border">
     <div class="clock-inner" >
-      <sevensegmentdisplay :value="bit7" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: -10px"/>
-      <sevensegmentdisplay :value="bit6" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
-      <sevensegmentdisplay :value="bit5" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
-      <sevensegmentdisplay :value="bit4" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
-      <sevensegmentdisplay :value="bit3" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
-      <sevensegmentdisplay :value="bit2" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
-      <sevensegmentdisplay :value="bit1" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
-      <sevensegmentdisplay :value="bit0" :rounded="false" :segment-width="25" :segment-height="5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="margin-left: 30px"/>
+      <sevensegmentdisplay :value="bit7" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="right: 5.1vw"/>
+      <sevensegmentdisplay :value="bit6" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="right: 4.2vw"/>
+      <sevensegmentdisplay :value="bit5" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="right: 3.2vw"/>
+      <sevensegmentdisplay :value="bit4" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="right: 2.3vw"/>
+      <sevensegmentdisplay :value="bit3" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="right: 1.5vw"/>
+      <sevensegmentdisplay :value="bit2" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="right: 0.5vw"/>
+      <sevensegmentdisplay :value="bit1" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="left: 0.4vw"/>
+      <sevensegmentdisplay :value="bit0" :rounded="false" :segment-width="2" :segment-height="0.5" on-color="rgba(76, 209, 55, 0.8)" off-color="transparent" style="left: 1.3vw"/>
     </div>
   </div>
-<div style=" width: 550px">
+<div style="margin-top: 4vh ;width: 32vw">
           <q-toggle
       class="rotate-270"
-        style="margin-left: 5px"
+        style="margin-left: 1vw"
         v-model="value7"
         color="secondary"
         @click="bitscounter"
       />
       <q-toggle
         class="rotate-270"
-        style="margin-left: 10px"
+        style="margin-left: 1vw"
         v-model="value6"
         color="secondary"
         @click="bitscounter"
@@ -31,7 +31,7 @@
 
       <q-toggle
         class="rotate-270"
-        style="margin-left: 10px"
+        style="margin-left: 1vw"
         v-model="value5"
         color="secondary"
         @click="bitscounter"
@@ -39,14 +39,14 @@
 
       <q-toggle
         class="rotate-270"
-        style="margin-left: 10px"
+        style="margin-left: 1vw"
         v-model="value4"
         color="secondary"
         @click="bitscounter"
       />
       <q-toggle
         class="rotate-270"
-        style="margin-left: 8px"
+        style="margin-left: 1vw"
         color="secondary"
         v-model="value3"
         @click="bitscounter"
@@ -54,7 +54,7 @@
 
       <q-toggle
         class="rotate-270"
-        style="margin-left: 8px"
+        style="margin-left: 1vw"
         v-model="value2"
         color="secondary"
         @click="bitscounter"
@@ -62,14 +62,14 @@
 
       <q-toggle
         class="rotate-270"
-        style="margin-left:8px"
+        style="margin-left: 1vw"
         v-model="value1"
         color="secondary"
         @click="bitscounter"
       />
       <q-toggle
         class="rotate-270"
-        style="margin-left:10px"
+        style="margin-left:1vw"
         v-model="value0"
         color="secondary"
         @click="bitscounter"
@@ -368,15 +368,16 @@ export default {
   .container {
     background: #222;
   border: 5px solid #1a1a1a;
-  width: 600px;
+  width: 34vw;
   display: flex;
   > * {
-    margin: 10px;
+    margin: auto;
   }
     justify-content: center;
     align-items: center;
-    margin: auto;
+    margin: auto 3vw auto;
     flex-direction: column;
+   margin-top: 25%;
   }
   .hour, .min, .secs {
     font-size: 8em;
@@ -389,12 +390,12 @@ export default {
   }
   .clock-border {
     height: 100%;
-  width: 500px;
+  width: 20vw;
   position: relative;
   }
   .clock-inner {
     height: 100%;
-  width: 500px;
+  width: 30vw;
   position: relative;
   }
 html,body {

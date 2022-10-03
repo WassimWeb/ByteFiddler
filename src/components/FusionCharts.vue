@@ -26,12 +26,18 @@ export default {
   }
 };
 </script>
-<style>
+<style lang="scss">
 .gauge {
-  width: 30vw;
-  top: -140px;
-  position: relative;
-  right: 110px;
+  width: 35vw;
+  height: 50vh;
+  display: flex;
+  > * {
+    margin: auto;
+  }
+    justify-content: center;
+    align-items: center;
+    margin: auto 1vw auto;
+    flex-direction: column;
 
 }
   /* border-radius: 3%;

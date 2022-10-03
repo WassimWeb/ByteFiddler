@@ -34,9 +34,9 @@ export default {
 </script>
 <style lang="css">
 .led-green {
-    margin: 5px auto;
-    width: 150px;
-    height: 150px;
+    margin: auto;
+    width: 10vw;
+    height: 20vh;
     /* background-color: #690; */
     border-radius: 100%;
     box-shadow: #000 0 -1px 3px 1px, inset #460 0 -1px 5px, #7D0 0 2px 6px;

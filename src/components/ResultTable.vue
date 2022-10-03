@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md" style="margin-top: -25px; margin-left: -25px">
+  <div class="q-pa-md row items-start q-gutter-md" >
 <!--     <q-table
       class="my-sticky-header-resulttable"
       :rows="row"
@@ -10,39 +10,39 @@
       bordered
       v-model:pagination="pagination"
     /> -->
-    <q-card class="my-card text-white" style="background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 12.5vw;background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">CHAR</div>
       </q-card-section>
 <q-separator dark />
-      <q-card-section style="height: 150px; font-size: 30px; text-align: center;">
+      <q-card-section style="height: 15vh; font-size: 1.5vw; text-align: center;">
         {{ row[0].CHAR }}
       </q-card-section>
     </q-card>
-    <q-card class="my-card text-white" style="background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 12.5vw;background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">DEC</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="height: 150px; font-size: 30px; text-align: center;">
+      <q-card-section style="height: 15vh; font-size: 1.5vw; text-align: center;">
         {{ row[0].DEC }}
       </q-card-section>
     </q-card>
-    <q-card class="my-card text-white" style="margin-top: 50%; background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 12.5vw;margin-top: 74%; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">HEX</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="height: 150px;font-size: 30px; text-align: center;">
+      <q-card-section style="height: 15vh;font-size: 1.5vw; text-align: center;">
         {{ row[0].HEX }}
       </q-card-section>
     </q-card>
-        <q-card class="my-card text-white" style="margin-top: 50%; background-color: LightSeaGreen">
+        <q-card class="my-card text-white" style="width: 12.5vw;margin-top: 74%; background-color: LightSeaGreen">
       <q-card-section>
-        <div class="text-h6">DESCRIPTION</div>
+        <div class="text-h6">DESCR</div>
       </q-card-section>
       <q-separator dark />
-      <q-card-section style="height: 150px; font-size: 30px">
+      <q-card-section style="height: 15vh; font-size: 1.5vw">
         {{ row[0].NAME }}
       </q-card-section>
     </q-card>
@@ -125,4 +125,16 @@ export default {
     color: black
 .my-card
   width: 280px
+</style>
+<style scoped>
+.text-h6 {
+  display: flex;
+  font-size: 2vw;
+  /* margin-top: 2.33em;
+  margin-bottom: 2.33em;
+  margin-left: 0;
+  margin-right: 0; */
+  text-align: center;
+  font-weight:normal;
+}
 </style>

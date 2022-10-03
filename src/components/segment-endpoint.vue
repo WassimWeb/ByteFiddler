@@ -12,7 +12,7 @@ export default {
     },
     size: {
       type: Number,
-      default: 5
+      default: 1
     }
   },
 

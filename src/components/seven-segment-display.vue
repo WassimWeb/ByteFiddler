@@ -81,11 +81,11 @@ export default {
     },
     segmentWidth: {
       type: Number,
-      default: 25
+      default: 1
     },
     segmentHeight: {
       type: Number,
-      default: 5
+      default: 1
     },
     onColor: {
       type: String,
@@ -114,16 +114,16 @@ export default {
       return {
         position: 'relative',
         display: 'inline-block',
-        width: `${this.containerWidth}px`,
-        height: `${this.containerHeight}px`
+        width: `${this.containerWidth}vw`,
+        height: `${this.containerHeight}vh`
       };
     },
 
     horizontalSegmentStyle () {
       return {
         position: 'relative',
-        width: `${this.segmentWidth}px`,
-        height: `${this.segmentHeight}px`,
+        width: `${this.segmentWidth}vw`,
+        height: `${this.segmentHeight}vh`,
         margin: '0 auto',
         borderRadius: `${this.rounded ? this.segmentHeight : 0}px`
       };
@@ -133,14 +133,14 @@ export default {
       return {
         position: 'relative',
         width: '100%',
-        height: `${this.segmentWidth}px`
+        height: `${this.segmentWidth}vw`
       };
     },
 
     verticalSegmentStyle () {
       return {
         position: 'absolute',
-        width: `${this.segmentHeight}px`,
+        width: `${this.segmentHeight}vh`,
         height: '100%',
         borderRadius: `${this.rounded ? this.segmentHeight : 0}px`
       };
@@ -157,7 +157,7 @@ export default {
       return {
         backgroundColor: color,
         borderColor: color,
-        borderWidth: `${this.segmentHeight}px`
+        borderWidth: `${this.segmentHeight}vw`
       };
     }
   }
