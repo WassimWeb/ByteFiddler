@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-none" v-if="!$q.platform.is.mobile">
+  <div class="q-pa-md" v-if="!$q.platform.is.mobile">
     <q-table
       class="my-sticky-header-table"
       :rows="row"
@@ -23,9 +23,9 @@
       </template>
     </q-table>
   </div>
-  <div class="q-pa-none" v-else>
+  <div class="q-pa-md" v-else>
     <q-table
-      class="my-sticky-header-table"
+      class="my-sticky-header-table-mobile"
       :rows="row"
       :columns="columns"
       color="white"
@@ -2169,4 +2169,34 @@ export default {
     background: #CCC
   tr:nth-child(odd)
     background: #FFF
+.my-sticky-header-table-mobile
+    /* height or max-height is important */
+    height: 93vh
+    widht: 100%
+    .q-table__top,
+    .q-table__bottom,
+    thead tr:first-child th
+      /* bg color is important for th; just specify one */
+      background-color: LightSeaGreen
+      color: white
+    thead tr th
+      position: sticky
+      z-index: 1
+    thead tr:first-child th
+      top: 0
+
+    /* this is when the loading indicator appears */
+    &.q-table--loading thead tr:last-child th
+      /* height of all previous header rows */
+      top: 0
+    /* specifying max-width so the example can
+      highlight the sticky column on any browser window */
+    width: 94w
+
+    thead tr:first-child th
+      /* bg color is important for th; just specify one */
+    tr:nth-child(even)
+      background: #CCC
+    tr:nth-child(odd)
+      background: #FFF
 </style>
