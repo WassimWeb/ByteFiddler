@@ -19,7 +19,7 @@
   <div class="q-pa-md" v-show="!prompt">
         <div class="row">
             <!-- <div class="col-4 col-md-4" ><result-table-mobile/></div> -->
-      <div class="col-8 col-md-10">
+      <div class="col-8 col-md-6">
             <div class="column" >
       <div class="col-4" style="padding-top: 7vh">
         <progress-counter-mobile/></div>
@@ -35,7 +35,7 @@
   <div class="q-pa-md" v-show="prompt">
         <result-table-mobile/>
         <br>
-        <q-btn color="positive" style="width: 75vw; top: 20vh; height: 10vh; left: 5vw" align="center" icon-right="send" label="Zurück" @click="switchThePage"/>
+        <q-btn color="positive" style="width: 75vw; top: 15vh; height: 10vh; left: 5vw" align="center" icon-right="send" label="Zurück" @click="switchThePage"/>
   </div>
 </q-page>
 </template>

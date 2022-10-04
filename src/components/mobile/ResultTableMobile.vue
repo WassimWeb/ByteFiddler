@@ -28,7 +28,7 @@
         {{ row[0].DEC }}
       </q-card-section>
     </q-card>
-    <q-card class="my-card text-white" style="width: 45%;top: 15vh; background-color: LightSeaGreen">
+    <q-card class="my-card text-white" style="width: 45%;top: 10vh; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">HEX</div>
       </q-card-section>
@@ -37,7 +37,7 @@
         {{ row[0].HEX }}
       </q-card-section>
     </q-card>
-        <q-card class="my-card text-white" style="width: 45%;top: 15vh; background-color: LightSeaGreen">
+        <q-card class="my-card text-white" style="width: 45%;top: 10vh; background-color: LightSeaGreen">
       <q-card-section>
         <div class="text-h6">DESCR</div>
       </q-card-section>

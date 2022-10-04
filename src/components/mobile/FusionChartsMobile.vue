@@ -29,14 +29,15 @@ export default {
 <style lang="scss" scoped>
 .gauge {
   width: 35vw;
-  height: 50vh;
+  height: 40vh;
   display: flex;
+  padding-right: 5vw;
   > * {
     margin: auto;
   }
     justify-content: center;
     align-items: center;
-    margin: auto 1vw auto;
+    margin: auto auto auto ;
     flex-direction: column;
 
 }

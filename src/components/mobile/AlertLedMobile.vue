@@ -35,8 +35,8 @@ export default {
 <style lang="css" scoped>
 .led-green {
     margin: auto;
-    width: 30vw;
-    height: 15vh;
+    width: 25vw;
+    height: 12vh;
     /* background-color: #690; */
     border-radius: 100%;
     box-shadow: #000 0 -1px 3px 1px, inset #460 0 -1px 5px, #7D0 0 2px 6px;
